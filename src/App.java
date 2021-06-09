@@ -6,30 +6,20 @@ import CalculaDistancia.DistanciaPalabras;
 
 public class App {
     public static void main(String[] args) {
-        // ------- TEST 1 -------
         System.out.println("\n------- TEST 1 -------");
-        String palabra = "CARA";
-
         List<String> candidatos = new ArrayList<>();
-        Collections.addAll(candidatos, "CARRO");
-        runTests(palabra, candidatos);
+        candidatos.add("CARRO");
+        runTests("CARA", candidatos);
 
-        // ------- TEST 2 -------
         System.out.println("\n------- TEST 2 -------");
-        palabra = "PADRON";
+        candidatos.clear();
+        candidatos.add("PATRON");
+        runTests("PADRON", candidatos);
 
-        candidatos = new ArrayList<>();
-        Collections.addAll(candidatos, "PATRON");
-        runTests(palabra, candidatos);
-
-        // ------- TEST 3 -------
         System.out.println("\n------- TEST 3 -------");
-        palabra = "CANTOR";
-
-        candidatos = new ArrayList<>();
+        candidatos.clear();
         Collections.addAll(candidatos, "CANTAR", "CANTA", "CONTAR");
-        runTests(palabra, candidatos);
-
+        runTests("CANTOR", candidatos);
     }
 
     public static void runTests(String palabraBase, List<String> candidatos) {
