@@ -15,9 +15,9 @@ public class DistanciaImplementacion implements Distancia {
         scan = new Scanner(System.in);
     }
 
-	@Override
-	public MejorDistancia calcularDistancia(String origen, Vector<String> candidatas) {
-		MejorDistancia resultado = new MejorDistancia();
+    @Override
+    public MejorDistancia calcularDistancia(String origen, Vector<String> candidatas) {
+        MejorDistancia resultado = new MejorDistancia();
         resultado.distancia = Integer.MAX_VALUE; // Mejor distancia inicial alta
         int resultadoComparacion;
         int nivel, diferenciaActual;
@@ -32,16 +32,16 @@ public class DistanciaImplementacion implements Distancia {
             }
         }
         return resultado;
-	}
+    }
 
-	@Override
-	public String obtenerOrigenPorPantalla() {
-		System.out.print("> Ingrese la palabra origen: ");
+    @Override
+    public String obtenerOrigenPorPantalla() {
+        System.out.print("> Ingrese la palabra origen: ");
         return scan.nextLine();
-	}
+    }
 
-	@Override
-	public Vector<String> obtenerCandidatasPorPantalla(){
+    @Override
+    public Vector<String> obtenerCandidatasPorPantalla(){
         System.out.println(
             "\nA continuacion ingrese las palabras candidatas. Ingrese alguno de los " +
             "siguientes [\"\", \"fin\", \"-1\"] para finalizar. "
@@ -59,8 +59,8 @@ public class DistanciaImplementacion implements Distancia {
             System.out.print("> Ingrese una candidata: ");
             palabra = scan.nextLine();
         }
-		return resultado;
-	}
+        return resultado;
+    }
 
     private int distanciaEntreDos(
         String base,
