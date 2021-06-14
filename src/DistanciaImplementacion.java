@@ -1,7 +1,68 @@
-package CalculaDistancia;
+import java.util.Vector;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
-public class DistanciaPalabras {
-    public int distanciaEntreDos(
+import PalabraDistancias.Distancia;
+import PalabraDistancias.MejorDistancia;
+
+public class DistanciaImplementacion implements Distancia {
+
+    private Scanner scan;
+
+    public DistanciaImplementacion() {
+        scan = new Scanner(System.in);
+    }
+
+	@Override
+	public MejorDistancia calcularDistancia(String origen, Vector<String> candidatas) {
+		MejorDistancia resultado = new MejorDistancia();
+        resultado.distancia = Integer.MAX_VALUE; // Mejor distancia inicial alta
+        int resultadoComparacion;
+        int nivel, diferenciaActual;
+
+        for (String candidata : candidatas) {
+            nivel = diferenciaActual = 0;
+            resultadoComparacion = distanciaEntreDos(origen, candidata, nivel, resultado.distancia, diferenciaActual);
+
+            if (resultadoComparacion < resultado.distancia) {
+                resultado.distancia = resultadoComparacion;
+                resultado.palabra = candidata;
+            }
+        }
+        return resultado;
+	}
+
+	@Override
+	public String obtenerOrigenPorPantalla() {
+		System.out.print("> Ingrese la palabra origen: ");
+        return scan.nextLine();
+	}
+
+	@Override
+	public Vector<String> obtenerCandidatasPorPantalla(){
+        System.out.println(
+            "\nA continuacion ingrese las palabras candidatas. Ingrese alguno de los " +
+            "siguientes [\"\", \"fin\", \"-1\"] para finalizar. "
+        );
+        List<String> salida = new ArrayList<String>();
+        Collections.addAll(salida ,"", "fin", "-1");
+
+        String palabra;
+        Vector<String> resultado = new Vector<String>();
+
+        System.out.print("> Ingrese una candidata: ");
+        palabra = scan.nextLine();
+        while (!salida.contains(palabra.toLowerCase())) {
+            resultado.add(palabra);
+            System.out.print("> Ingrese una candidata: ");
+            palabra = scan.nextLine();
+        }
+		return resultado;
+	}
+
+    private int distanciaEntreDos(
         String base,
         String objetivo,
         int nivel,
@@ -59,23 +120,4 @@ public class DistanciaPalabras {
     private int indiceSeguro(String palabra, int indice) {
         return Math.min(palabra.length(), indice);
     }
-
-
-
-    public void testMethods() {
-        String base = "CARA";
-        String destino = "CARRO";
-        int indice = 3;
-        String sonIguales = caracterEsIgual(base, destino, indice) ? "SI" : "NO";
-        String reemplazado = reemplazaCaracter(base, destino, indice);
-        String eliminado = eliminaCaracter(base, indice);
-        String insertado = insertaCaracter(base, destino, indice);
-
-        System.out.println("BASE: " + base + "\nDESTINO: " + destino);
-        System.out.println("caracterEsIgual en " + indice + ": " + sonIguales);
-        System.out.println("Remplaza en " + indice + ": " + reemplazado);
-        System.out.println("Elimina en " + indice + ": " + eliminado);
-        System.out.println("Inserta en " + indice + ": " + insertado);
-    }
-
 }
