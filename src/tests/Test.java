@@ -27,9 +27,10 @@ public class Test {
     public static void runTests(String palabraBase, Vector<String> candidatas) {
         DistanciaImplementacion metodos = new DistanciaImplementacion();
         System.out.println("Palabra base \"" + palabraBase + "\"\nCandidatas:");
-        for (String pal : candidatas) {
+
+        for (String pal : candidatas)
             System.out.println("   - " + pal);
-        }
+
         MejorDistancia resultado = metodos.calcularDistancia(palabraBase, candidatas);
         System.out.println("Mejor palabra obtenida: " + resultado.palabra + " con distancia: " + resultado.distancia);
     }
