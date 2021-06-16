@@ -32,7 +32,7 @@ Cada una seguida de su correspondiente llamado recursivo sumando un nivel.
 Es una función recursiva donde sus entradas disminuyen por forma de sustracción, siempre reduciendo la entrada de a 1, en nuestro caso representa la evaluación de un carácter menos y en el peor de los casos se puede realizar un llamado recursivo hasta 3 veces.
 Todas las operaciones realizadas además de los llamados recursivos son de complejidad temporal constante.  
 
-De lo anterior obtenemos que el algoritmo [`distanciaEntreDos`](https://github.com/diegoasanch/TPO_Programacion_3/blob/61e4228f7d17823c1735ae8e8c9e6170997f9606/src/implementaciones/DistanciaImplementacion.java#L66) tiene una complejidad temporal de $\Theta(3^n)$ donde $n$ es la longitud de la cadena mas larga entre las cadenas recibidas.
+De lo anterior obtenemos que el algoritmo [`distanciaEntreDos`](https://github.com/diegoasanch/TPO_Programacion_3/blob/61e4228f7d17823c1735ae8e8c9e6170997f9606/src/implementaciones/DistanciaImplementacion.java#L66) tiene una complejidad temporal de `O(3^n)` donde `n` es la longitud de la cadena mas larga entre las cadenas recibidas.
 
 ## Integrantes
 
