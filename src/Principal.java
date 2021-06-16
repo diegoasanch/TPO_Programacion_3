@@ -1,5 +1,6 @@
 import java.util.Vector;
 import PalabraDistancias.MejorDistancia;
+import implementaciones.DistanciaImplementacion;
 
 public class Principal {
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package implementaciones;
 import java.util.Vector;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,11 +47,11 @@ public class DistanciaImplementacion implements Distancia {
             "\nA continuacion ingrese las palabras candidatas. Ingrese alguno de los " +
             "siguientes [\"\", \"fin\", \"-1\"] para finalizar. "
         );
-        List<String> salida = new ArrayList<String>();
+        List<String> salida = new ArrayList<>();
         Collections.addAll(salida ,"", "fin", "-1");
 
         String palabra;
-        Vector<String> resultado = new Vector<String>();
+        Vector<String> resultado = new Vector<>();
 
         System.out.print("> Ingrese una candidata: ");
         palabra = scan.nextLine();
