@@ -9,9 +9,14 @@ public class Principal {
 
         String origen = distanciaImp.obtenerOrigenPorPantalla();
         Vector<String> candidatas = distanciaImp.obtenerCandidatasPorPantalla();
-        MejorDistancia resultado = distanciaImp.calcularDistancia(origen, candidatas);
 
-        imprimirResultado(resultado);
+        if (candidatas.isEmpty()) {
+            System.out.println("\nNo ingreso ninguna palabra candidata :(");
+        }
+        else {
+            MejorDistancia resultado = distanciaImp.calcularDistancia(origen, candidatas);
+            imprimirResultado(resultado);
+        }
     }
 
     private static void imprimirResultado(MejorDistancia resultado) {
