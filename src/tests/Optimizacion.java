@@ -31,15 +31,15 @@ public class Optimizacion {
     private static void cargaCandidatas() {
         pruebas = new ArrayList<>();
 
-        pruebas.add(new TestData("COLOR", "CALOR"));
-        pruebas.add(new TestData("TECLADO", "TECLAS", "TABLERO"));
-        pruebas.add(new TestData("TAZA", "CAZA", "TAZON", "TARZAN"));
-        pruebas.add(new TestData("PILA", "PALA", "POLAR", "POLO", "PALO"));
-        pruebas.add(new TestData("CARA", "PARA", "CARTAS", "CURAS", "CARTON", "CARROS"));
-        pruebas.add(new TestData("CANTOR", "CANTAR", "CANTA", "CONTAR", "CANTANTE", "CAJERO", "CORTINA"));
-        pruebas.add(new TestData("PADRON", "PATRON", "PUERTA", "PADRE", "LADRON", "PIEDRA", "PADRES", "PUENTE"));
-        pruebas.add(new TestData("REGLA", "REGLAS", "RELOJ", "RENGLON", "RASTRO", "RELACION", "ROTO", "RATON", "RUIDO"));
-        pruebas.add(new TestData("TESLA", "MESA", "TESTEAR", "ELSA", "BALZA", "TESIS", "TERMAS", "TESTIFICAR", "TEXAS", "TEMBLAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR", "HABLAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR", "HABLAR", "LANZAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR", "HABLAR", "LANZAR", "LIMPIAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR", "HABLAR", "LANZAR", "LIMPIAR", "CORTAR"));
+        pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR", "HABLAR", "LANZAR", "LIMPIAR", "CORTAR", "CALAMAR"));
         pruebas.add(new TestData("ARMAR", "AMAR", "ALTAMAR", "ARRIBA", "ALZAR", "HABLAR", "LANZAR", "LIMPIAR", "CORTAR", "CALAMAR", "CALZAR"));
     }
 
